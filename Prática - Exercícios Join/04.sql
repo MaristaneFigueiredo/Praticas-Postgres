@@ -1,4 +1,1 @@
-SELECT ex."userId", users.name, roles.name AS role, companies.name AS company, ex."starDate" 
-FROM experiences ex INNER JOIN roles ON ex."roleId" = roles.id 
-INNER JOIN users ON ex."userId" = users.id INNER JOIN companies ON ex."companyId" = companies.id WHERE ex.id = 50 and ex."endDate" IS NULL;
-
+SELECT e."userId" AS id, u.name, r.name AS role, c.name AS company, e."startDate" FROM experiences e JOIN users u ON e."userId" = u.id JOIN roles r ON e."roleId" = r.id JOIN companies c ON e."companyId" = c.id WHERE e."userId" = 50 AND e."endDate" IS NULL;

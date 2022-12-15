@@ -1,1 +1,1 @@
-SELECT users.id, users.name, cities.name AS city FROM users JOIN cities ON users."cityId" = cities.id WHERE cities.name = 'Rio de Janeiro';
+SELECT u.id, u.name, c.name AS city FROM users u JOIN cities c ON u."cityId" = c. id WHERE c.name = 'Rio de Janeiro';
